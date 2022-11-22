@@ -1,10 +1,7 @@
 let botao = document.querySelector('#botao')
 botao.addEventListener('click', calcular)
 
- 
-
 function calcular() {
-
     //Paulo
     let pesoKgSelec0 = document.querySelectorAll('.info-peso')[0].innerHTML
     let alturaMSelec0 = document.querySelectorAll('.info-altura')[0].innerHTML
