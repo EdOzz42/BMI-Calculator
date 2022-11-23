@@ -85,46 +85,79 @@ function registrar() {
     if (nome.length == 0 || peso.length == 0 || altura.length == 0 || idade.length == 0) {
         window.alert('[ERRO!] Verifique os dados novamente!')
     } 
+    else if (peso < 0 || altura < 0 || idade < 0) {
+        window.alert('[ERRO!] Você não pode usar valores negativos!')
+    } 
+    else if (peso >= 300) {
+        window.alert('[ERRO!] Peso inválido!')
+    } 
+    else if (altura >= 2) {
+        window.alert('[ERRO!] Altura inválida!')
+    }
+    else if (idade >= 120) {
+        window.alert(`[ERRO!] Idade inválida. Só tartaruga tem ${idade} anos!`)
+    }
     else {
-        let genderNumber = " "
-        let IMC = peso / altura ** 2 
-        
-        if (formSexo[0].checked) {
-            genderNumber = 1 
-        } else {
-            genderNumber = 0
-        }
+    let genderNumber = " "
+    let IMC = peso / altura ** 2 
     
-        let gordCorp = (1.20 * IMC) + (0.23 * idade) - (10.8 * genderNumber) - 5.4
-        
+    if (formSexo[0].checked) {
+        genderNumber = 1 
+    } else {
+        genderNumber = 0
+    }
+
+    let gordCorp = (1.20 * IMC) + (0.23 * idade) - (10.8 * genderNumber) - 5.4
     
-        let table = document.querySelector('#registro')
-        let tBodyRegistro = document.createElement('tBody')
-        table.appendChild(tBodyRegistro)
+    let tBody = document.querySelector('#contentTabelaNovos')
+    let tr = document.createElement('tr')
+    tr.setAttribute('id', 'tr')
+    tBody.appendChild(tr)
+
+    let td0 = document.createElement('td')
+    tr.appendChild(td0)
+    let content0 = document.createTextNode(`${nome}`)
+    td0.appendChild(content0)
+
+    let td1 = document.createElement('td')
+    tr.appendChild(td1)
+    let content1 = document.createTextNode(`${peso}`)
+    td1.appendChild(content1)
+
+    let td2 = document.createElement('td')
+    tr.appendChild(td2)
+    let content2 = document.createTextNode(`${altura}`)
+    td2.appendChild(content2)
+
+    let td3 = document.createElement('td')
+    tr.appendChild(td3)
+    let content3 = document.createTextNode(`${gordCorp.toFixed(2)}`)
+    td3.appendChild(content3)
+
+    let td4 = document.createElement('td')
+    tr.appendChild(td4)
+    let content4 = document.createTextNode(`${IMC.toFixed(2)}`)
+    td4.appendChild(content4)
+}
+}
+
+let botaoLimpar = document.querySelector('#limpar')
+botaoLimpar.addEventListener('click', limpar)
+
+function limpar() {
+    let tBody = document.querySelector('#contentTabelaNovos')
+    let tr = document.querySelector('#tr')
+    tBody.removeChild(tr)
+}
+
+let botaoLimparAll = document.querySelector('#limparTudo')
+botaoLimparAll.addEventListener('click', limparTudo) 
+
+function limparTudo() {
+    let tBody = document.querySelector('#contentTabelaNovos')
     
-        let td0 = document.createElement('td')
-        tBodyRegistro.appendChild(td0)
-        let content0 = document.createTextNode(`${nome}`)
-        td0.appendChild(content0)
-    
-        let td1 = document.createElement('td')
-        tBodyRegistro.appendChild(td1)
-        let content1 = document.createTextNode(`${peso}`)
-        td1.appendChild(content1)
-    
-        let td2 = document.createElement('td')
-        tBodyRegistro.appendChild(td2)
-        let content2 = document.createTextNode(`${altura}`)
-        td2.appendChild(content2)
-    
-        let td3 = document.createElement('td')
-        tBodyRegistro.appendChild(td3)
-        let content3 = document.createTextNode(`${gordCorp.toFixed(2)}`)
-        td3.appendChild(content3)
-    
-        let td4 = document.createElement('td')
-        tBodyRegistro.appendChild(td4)
-        let content4 = document.createTextNode(`${IMC.toFixed(2)}`)
-        td4.appendChild(content4)
+    while (tBody.firstChild) {
+        let tr = document.querySelector('#tr')
+        tBody.removeChild(tr)
     }
 }

@@ -40,7 +40,6 @@
 							</td>
 						</tr>
 						
-
 						<tr class="paciente" >
 							<td class="info-nome">João</td>
 							<td class="info-peso">80</td>
@@ -70,6 +69,7 @@
 
 							</td>
 						</tr>
+						
 						<tr class="paciente" >
 							<td class="info-nome">Tatiana</td>
 							<td class="info-peso">46</td>
@@ -90,36 +90,47 @@
 					<p>Nome: 
 						<input type="text" name="nomePaciente" id="nomePaciente" class="inputAddPacientes">
 					</p>
+					
 					<p class="inputAddPacientesSex">
 						Sexo: <input type="checkbox" name="sexo" id="sexoMasc" checked> Masculino 
 						<input type="checkbox" name="sexo" id="sexoFemi"> Feminino 
 					</p>
+					
 					<p>Idade (anos): 
 						<input type="number" name="idade" id="idade" class="inputAddPacientes">
 					</p>
+					
 					<p>Peso (Kg): 
-						<input type="number" name="pesoKg" id="PesoKg" class="inputAddPacientes">
+						<input type="number" name="pesoKg" id="PesoKg" class="inputAddPacientes"> 
+						<div id="PesoInvalido"> </div>  
 					</p>
+					
 					<p>Altura (m): 
 						<input type="number" name="alturaM" id="AlturaM"class="inputAddPacientes">
 					</p>
 					
-					<input type="button" value="Registrar" id="botaoRegistro" class="botao">
+					<div class="botoes">
+						<input type="button" value="Registrar" id="botaoRegistro" class="botao">
+						<input type="button" value="Limpar" id="limpar" class="botao">
+						<input type="button" value="Limpar Tudo" id="limparTudo" class="botao">
+					</div>
 				</div>
 
 				<div>
-				 <table id="registro">
-					<thead>
-						<tr>
-							<th>Nome</th>
-							<th>Peso(kg)</th>
-							<th>Altura(m)</th>
-							<th>Gordura Corporal(%)</th>
-							<th>IMC</th>
-						</tr>
-					</thead>
+				 	<table id="registro">
+						<thead>
+							<tr>
+								<th>Nome</th>
+								<th>Peso(kg)</th>
+								<th>Altura(m)</th>
+								<th>Gordura Corporal(%)</th>
+								<th>IMC</th>
+							</tr>
+						</thead>
+						<tbody id="contentTabelaNovos">
 
-				 </table>
+						</tbody>
+				 	</table>
 				</div>
 			</section>
 		</main>
