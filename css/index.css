@@ -40,12 +40,11 @@ main {
 	width: 90%;
 	min-width: 300px;
 	max-width: 850px;
-	margin: 0 auto;
+	margin: auto;
 }
 
 section{
 	margin: 2em 0;
-	overflow: hidden;
 }
 
 section h2{
@@ -59,26 +58,9 @@ section h2{
 }
 
 /* Table ==============*/
-
-.table-border {
-	border: 3px solid rgb(0, 110, 158);
-	border-radius: .5em;
-}
-
 table {
+	table-layout: fixed;
 	width: 100%;
-	background-color: var(--white-table-form);
-	border-collapse: collapse;
-    table-layout: fixed;
-}
-
-table tbody tr {
-	transition: .20s;
-}
-
-table tbody tr:hover {
-	background-color: rgba(0, 112, 160, 0.5);
-	transform: scale(1.05);
 }
 
 th {
@@ -88,12 +70,43 @@ th {
 }
 
 td {
-	padding: 1em;
+	padding: 1rem;
 	text-align: center;
-	border-bottom: 2px solid rgb(0, 110, 158);
+	background-color: var(--white-table-form);
 }
 
-/* Form ==============*/
+table tbody tr {
+	transition: .15s;
+}
+
+table tbody tr:hover {
+	box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.255);
+	transform: scale(1.025);
+}
+
+table tbody tr:last-child:hover {
+	border-radius: 0 0 0.5rem 0.5rem;
+}
+
+/*Table border radius ==============*/
+
+table thead tr th:first-child {
+	border-radius: 0.5rem 0 0 0rem;
+}
+
+table thead tr th:last-child {
+	border-radius: 0 0.5rem 0 0;
+}
+
+table tbody tr:last-child td:first-child{
+	border-radius: 0 0 0 0.5rem;
+}
+
+table tbody tr:last-child td:last-child {
+	border-radius: 0 0 0.5rem 0;
+}
+
+/*Form ==============*/
 
 form {
 	background-color: var(--white-table-form);
