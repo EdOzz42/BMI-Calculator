@@ -1,6 +1,6 @@
 :root {
-	--white-background: rgb(220, 220, 220);
-	--white-table-form:  rgb(240, 240, 240)
+	--white-background: rgb(215, 215, 215);
+	--white-table-form:  rgb(237, 237, 237)
 }
 
 body {
@@ -11,7 +11,7 @@ body {
 /* Header ============================================*/
 
 header {
-	background-color: rgb(0, 118, 161);
+	background-color: rgb(122, 122, 122);
 	background-image: url(../images/nutrition.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -30,8 +30,8 @@ header::after {
 	position: absolute;
 	z-index: -1;
 	inset: 0;
-	background-color:rgb(10, 54, 67);
-	opacity: 0.65;
+	background-color: rgb(0, 84, 120);
+	opacity: 0.55;
 }
 
 /* Main  ============================================*/
@@ -65,23 +65,26 @@ table {
 
 th {
 	font-weight: bold;
-	background-image: linear-gradient(rgb(0, 110, 158, 0.20), rgb(0, 110, 158, 0.55));
-	padding: 1.1em;
+	vertical-align: middle;
+	background-image: linear-gradient(rgb(0, 110, 158, 0.30), rgb(0, 110, 158, 0.65));
+	padding: 1.25em;
 }
 
 td {
 	padding: 1rem;
 	text-align: center;
-	background-color: var(--white-table-form);
 }
 
 table tbody tr {
-	transition: .15s;
+	transition: .13s;
+	background-color: var(--white-table-form);
 }
 
 table tbody tr:hover {
-	box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.255);
-	transform: scale(1.025);
+	cursor: pointer;
+	transform: scale(1.015);
+	box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.235);
+	background-color: rgb(248, 248, 248);
 }
 
 table tbody tr:last-child:hover {
