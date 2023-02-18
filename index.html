@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Body Mass Index calculator, BMI calculator">
+    <meta name="description" content="A Body Mass Index Calculator">
+    <meta name="author" content="Eduardo de Oliveira">
+    
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <header>
+        <h1>Body Mass Index Calculator</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Calculate your Body Mass Index</h2>
+            <p>The Body Mass Index is a way to measure body fat based on the weight divided by the square of height in meters.</p>
+        </section>
+        
+        <section>
+            <h2>BMI Calculator</h2>
+            <form action="." onsubmit='App.init(event)'>
+                <div class="inputs-height-weight">
+                    <label for="height">Height:</label>
+                    <input type="number" name="height" id="height" placeholder="meters" required>
+
+                    <label for="weight">Weight:</label>
+                    <input type="number" name="weight" id="weight" placeholder="kilograms" required>
+                </div>
+
+                <div class="submit">
+                    <input type="submit" id="submitButton" value="Calculate">
+                </div>
+            </form>
+        </section>
+
+        <section id="result">
+            
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <Script src="./calculate.js"></Script>
+</body>
+</html>
