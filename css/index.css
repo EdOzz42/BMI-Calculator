@@ -40,8 +40,8 @@ body {
     }    
 
     .bmi-chart-image {
-        width: 250px;
-        height: 250px;
+        width: 300px;
+        height: 185px;
         border-radius: .25rem;
         display: initial;
     }
@@ -60,7 +60,7 @@ body {
 
 @media (min-width: 1000px) {
     main.container {
-        width: 55%;
+        width: 60%;
     }
     
     section.bmi-calculator{
@@ -68,8 +68,8 @@ body {
     }
 
     .bmi-chart-image {
-        width: 300px;
-        height: 300px;
+        width: 340px;
+        height: 209px;
     }
 
     section .result .content {
@@ -78,9 +78,13 @@ body {
 }
 
 @media (min-width: 1300px) {
+    main.container {
+        width: 50%
+    }
+    
     .bmi-chart-image {
-        width: 350px;
-        height: 350px;
+        width: 400px;
+        height: 246px;
     }
 
     section .result .content {

@@ -11,7 +11,7 @@ section.bmi-calculator form {
 }
 
 section.bmi-calculator form .flex-items {
-    height: 90%;
+    height: 87%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
