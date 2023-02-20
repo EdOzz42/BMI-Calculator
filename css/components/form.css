@@ -10,7 +10,8 @@ section.bmi-calculator form {
     background-color: rgba(0, 0, 0, 0.25);
 }
 
-section.bmi-calculator form .inputs-height-weight {
+section.bmi-calculator form .flex-items {
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -21,7 +22,7 @@ section.bmi-calculator .submit input {
     border: 0;
     border-radius: .25rem;
     padding: .5rem;
-    margin: .25rem 0 1rem 0;
+    margin: .25rem 0 .5rem 0;
     transition: .25s;
 }
 

@@ -28,16 +28,19 @@
         <section class="bmi-calculator">
             <form action="." onsubmit='App.init(event)'>
                 <h2>BMI Calculator</h2>
-                
-                <div class="inputs-height-weight">
-                    <label for="height">Height:</label>
-                    <input type="number" name="height" id="height" placeholder="centimeters" required>
-                    <label for="weight">Weight:</label>
-                    <input type="number" name="weight" id="weight" placeholder="kilograms" required>
-                </div>   
-
-                <div class="submit">
-                    <input type="submit" id="submitButton" value="Calculate">
+                <div class="flex-items">
+                    <div class="inputs-height-weight">
+                        <label for="height">Height:</label>
+                        <input type="number" name="height" id="height" placeholder="centimeters">
+                        <p class="error"></p>
+                        <label for="weight">Weight:</label>
+                        <input type="number" name="weight" id="weight" placeholder="kilograms">
+                        <p class="error"></p>
+                    </div>
+                    
+                    <div class="submit">
+                        <input type="submit" id="submitButton" value="Calculate">
+                    </div>
                 </div>
             </form>     
 

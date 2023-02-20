@@ -2,6 +2,7 @@
 @import url(./components/container.css);
 @import url(./components/form.css);
 @import url(./components/result.css);
+@import url(./components/errors.css);
 
 :root {
     --background-color: #9aa0a8;
@@ -25,7 +26,7 @@ body {
 
 @media (min-width: 750px) {
     main.container {
-        width: 65%;
+        width: 75%;
     }
     
     section.bmi-calculator{
@@ -34,8 +35,13 @@ body {
         width: 100%;
     }
 
+    section.bmi-calculator form{
+        width: 35%;
+    }    
+
     .bmi-chart-image {
         width: 250px;
+        height: 250px;
         border-radius: .25rem;
         display: initial;
     }
@@ -63,6 +69,7 @@ body {
 
     .bmi-chart-image {
         width: 300px;
+        height: 300px;
     }
 
     section .result .content {
@@ -72,7 +79,8 @@ body {
 
 @media (min-width: 1300px) {
     .bmi-chart-image {
-        width: 400px;
+        width: 350px;
+        height: 350px;
     }
 
     section .result .content {

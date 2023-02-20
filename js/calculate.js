@@ -6,7 +6,7 @@ const Result = {
     }
 }
 
-const DOM = {
+const DOM = {    
     create() {
         const BMIData = CalculateBMI.calculate()
         const range = {
@@ -77,7 +77,6 @@ const DOM = {
 
             document.querySelector('div.bmi').classList.add('danger')
         }  
-        
     },
 
     delete() {
@@ -97,8 +96,50 @@ const CalculateBMI = {
     }
 }
 
+const ErrorVerification = {
+    verification(){
+        const weight = document.querySelector('#weight')
+        const height = document.querySelector('#height')
+        const error = document.getElementsByClassName('error')
+
+        ErrorVerification.deleteError(error)
+
+        if (weight.value === "" && height.value === "") 
+        {
+            for (i = 0; i < error.length; i++) {
+                error[i].innerHTML = "Error - Please fill out this field"
+                error[i].classList.add('active')
+            }
+            
+            return false
+        }
+        else if (weight.value > 400 || weight.value < 40) 
+        {
+            error[1].innerHTML = "Error - Please enter a valid value (40kg - 400kg)"
+            error[1].classList.add('active')
+
+            return false
+        }
+        else if (height.value > 200 || height.value < 70) 
+        {
+            error[0].innerHTML = "Error - Please enter a valid value (70cm - 200cm)"
+            error[0].classList.add('active')
+
+            return false
+        }
+
+        return true
+    },
+
+    deleteError(error){
+        for (i = 0; i < error.length; i++){
+            error[i].classList.remove('active')
+        }
+    }
+}
+
 const GetData = {
-    getWeightAndHeight() {
+    getWeightAndHeight() {    
         const weight = document.querySelector('#weight').value
         const height = document.querySelector('#height').value
 
@@ -119,6 +160,8 @@ const Utilities = {
 const App = {
     init(event) {
         Utilities.preventDefaultAction(event)
-        Result.show()
+        if (ErrorVerification.verification()) {
+            Result.show()
+        }
     }
 }
