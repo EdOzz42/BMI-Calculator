@@ -1,0 +1,20 @@
+@import url(./components/header.css);
+@import url(./components/container.css);
+@import url(./components/form.css);
+@import url(./components/result.css);
+
+:root {
+    --background-color: #e1e1e1;
+    --font-color: #0e2543;
+    --header-background-color-0: #A7E4F2;
+    --header-background-color-1: #3F618C;
+    --form-background: #e8e7e7;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--font-color);
+    font-family: "sizmo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}

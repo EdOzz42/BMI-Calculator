@@ -7,26 +7,30 @@
     <meta name="keywords" content="Body Mass Index calculator, BMI calculator">
     <meta name="description" content="A Body Mass Index Calculator">
     <meta name="author" content="Eduardo de Oliveira">
-    
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://use.typekit.net/fgi3lqp.css">
+    <link rel="stylesheet" href="./css/main.css">
     <title>BMI Calculator</title>
 </head>
 <body>
     <header>
-        <h1>Body Mass Index Calculator</h1>
+        <h1 class="logo">Body Mass Index Calculator</h1>
     </header>
 
-    <main>
-        <section>
+    <main class="container">
+        <section class="text-content">
             <h2>Calculate your Body Mass Index</h2>
             <p>The Body Mass Index is a way to measure body fat based on the weight divided by the square of height in meters.</p>
         </section>
         
-        <section>
+        <hr>
+
+        <section class="bmi-calculator">
             <h2>BMI Calculator</h2>
             <form action="." onsubmit='App.init(event)'>
                 <div class="inputs-height-weight">
                     <label for="height">Height:</label>
-                    <input type="number" name="height" id="height" placeholder="meters" required>
+                    <input type="number" name="height" id="height" placeholder="centimeters" required>
 
                     <label for="weight">Weight:</label>
                     <input type="number" name="weight" id="weight" placeholder="kilograms" required>
@@ -38,7 +42,7 @@
             </form>
         </section>
 
-        <section id="result">
+        <section id="result" class="result">
             
         </section>
     </main>
@@ -47,6 +51,6 @@
 
     </footer>
 
-    <Script src="./calculate.js"></Script>
+    <Script src="./js/calculate.js"></Script>
 </body>
 </html>

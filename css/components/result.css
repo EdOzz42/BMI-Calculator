@@ -1,0 +1,21 @@
+section .result-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section .bmi-result {
+  font-size: 2.5rem;
+}
+
+.danger {
+  color: red;
+}
+
+.caution {
+  color: rgb(255, 187, 0);
+}
+
+.healthy {
+  color: #6ac4d9;
+}

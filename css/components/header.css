@@ -1,0 +1,17 @@
+header {
+    background-image: linear-gradient(90deg, var(--header-background-color-0), var(--header-background-color-1));
+    animation: motion 8s linear infinite alternate;
+    background-size: 150%;
+    padding: 3rem 0 6rem 0;
+}
+
+header .logo {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+@keyframes motion {
+    0% {background-position: 0%}
+    100% {background-position: 100%}
+}
