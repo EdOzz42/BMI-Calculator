@@ -1,7 +1,7 @@
 section.bmi-calculator {
  background-color: var(--form-background);
  border-radius: .25rem;
- padding: 1rem 1rem 0rem 1rem;
+ padding: 1rem;
 }
 
 section.bmi-calculator form {

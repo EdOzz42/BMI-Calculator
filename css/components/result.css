@@ -1,11 +1,8 @@
-section .result-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-section .bmi-result {
-  font-size: 2.5rem;
+section .result .bmi{
+  margin-top: 1rem;
+  font-size: 2.75rem;
+  font-weight: 600;
 }
 
 .danger {
