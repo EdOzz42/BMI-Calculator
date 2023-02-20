@@ -1,12 +1,14 @@
 p.error {
     opacity: 0;
     width: 0;
+    height: 0;
 }
 
 p.error.active {
     background-color: rgba(255, 0, 0, 0.5);
     opacity: 100;
     width: 100%;
+    height: auto;
     border-radius: .25rem;
     color: rgb(81, 35, 35);
     font-size: .75rem;
