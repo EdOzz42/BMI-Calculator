@@ -1,7 +1,13 @@
 section.bmi-calculator {
  background-color: var(--form-background);
  border-radius: .25rem;
- padding: 1rem;
+ padding: 1rem 1rem 0rem 1rem;
+}
+
+section.bmi-calculator form {
+    padding: .5rem;
+    border-radius: .25rem;
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 section.bmi-calculator form .inputs-height-weight {
@@ -10,7 +16,8 @@ section.bmi-calculator form .inputs-height-weight {
     justify-content: space-between;
 }
 
-section.bmi-calculator form input {
+section.bmi-calculator form input,
+section.bmi-calculator .submit input {
     border: 0;
     border-radius: .25rem;
     padding: .5rem;
@@ -18,21 +25,22 @@ section.bmi-calculator form input {
     transition: .25s;
 }
 
-section.bmi-calculator form input:focus {
+section.bmi-calculator input:focus {
    outline: 1px solid #3F618C;
    scale: 1.015;
 }
 
-section.bmi-calculator form input:hover {
+section.bmi-calculator input:hover {
    scale: 1.015;
 }
 
-section.bmi-calculator form .submit input {
+section.bmi-calculator .submit input {
     background-color: #fff;
+    font-size: 1rem;
     font-weight: 600;
 }
 
-section.bmi-calculator form .submit input:hover {
+section.bmi-calculator .submit input:hover {
     background-color: #3F618C;
     scale: 1.08;
     color: #fff;

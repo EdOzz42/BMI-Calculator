@@ -9,7 +9,7 @@
     <meta name="author" content="Eduardo de Oliveira">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="https://use.typekit.net/fgi3lqp.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/index.css">
     <title>BMI Calculator</title>
 </head>
 <body>
@@ -26,20 +26,22 @@
         <hr>
 
         <section class="bmi-calculator">
-            <h2>BMI Calculator</h2>
             <form action="." onsubmit='App.init(event)'>
+                <h2>BMI Calculator</h2>
+                
                 <div class="inputs-height-weight">
                     <label for="height">Height:</label>
                     <input type="number" name="height" id="height" placeholder="centimeters" required>
-
                     <label for="weight">Weight:</label>
                     <input type="number" name="weight" id="weight" placeholder="kilograms" required>
-                </div>
+                </div>   
 
                 <div class="submit">
                     <input type="submit" id="submitButton" value="Calculate">
                 </div>
-            </form>
+            </form>     
+
+            <img src="assets/Body_mass_index.png" alt="Body mass index chart" class="bmi-chart-image">
         </section>
 
         <section id="result" class="result">

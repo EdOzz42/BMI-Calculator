@@ -1,0 +1,64 @@
+@import url(./components/header.css);
+@import url(./components/container.css);
+@import url(./components/form.css);
+@import url(./components/result.css);
+
+:root {
+    --background-color: #9aa0a8;
+    --font-color: #0e2543;
+    --header-background-color-0: #A7E4F2;
+    --header-background-color-1: #3F618C;
+    --form-background: #d5d8dc;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--font-color);
+    font-family: "sizmo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bmi-chart-image {
+    display: none;
+}
+
+@media (min-width: 750px) {
+    main.container {
+        width: 65%;
+    }
+    
+    section.bmi-calculator{
+        display: flex;
+        padding-bottom: 1rem;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .bmi-chart-image {
+        width: 250px;
+        border-radius: .25rem;
+        display: initial;
+    }
+}
+
+
+@media (min-width: 1000px) {
+    main.container {
+        width: 55%;
+    }
+    
+    section.bmi-calculator{
+        width: 100%;
+    }
+
+    .bmi-chart-image {
+        width: 300px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .bmi-chart-image {
+        width: 400px;
+    }
+}
