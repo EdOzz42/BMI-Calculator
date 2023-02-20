@@ -1,0 +1,16 @@
+p.error {
+    opacity: 0;
+    width: 0;
+}
+
+p.error.active {
+    background-color: rgba(255, 0, 0, 0.5);
+    opacity: 100;
+    width: 100%;
+    border-radius: .25rem;
+    color: rgb(81, 35, 35);
+    font-size: .75rem;
+    padding: .25rem;
+    margin: 0.25rem 0 1rem 0;
+    transition: .5s;
+}
