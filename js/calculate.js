@@ -15,85 +15,69 @@ const DOM = {
             overweightLimit: 29.9
         }
 
-        let title = document.createElement('h2')
-        let content = document.createElement('p')
-
-        if (BMIData <=  range.underweightLimit) {
-            title.innerHTML = 
-            `
-            <hr>
-            <div class="result-title">
-                <h2>Underweight</h2>
-                <div class="bmi-result">${BMIData}</div>
-            </div>
-            `
-            
+        const content = document.querySelector('#result')
+        
+        if (BMIData <=  range.underweightLimit) {    
             content.innerHTML = 
             `
-            <p>If your BMI is less than 18.5, it falls within the underweight range.</p>
-            `
-            DOM.appendChild(title, content)
-            document.querySelector('div.bmi-result').classList.add('danger')
-        }
-        else if (BMIData <= range.healthyWeightLimit) {     
-            title.innerHTML = 
-            `
             <hr>
-            <div class="result-title">
-                <h2>Healthy Weight</h2>
-                <div class="bmi-result">${BMIData}</div>
+            <div class="result">
+                <div class="content">
+                    <h2>Underweight</h2>
+                    <p>If your BMI is less than 18.5, it falls within the underweight range.</p>
+                </div>
+                <div class="bmi">${BMIData}</div>
             </div>
             `
 
-            content.innerHTML = 
-            `
-            <p>If your BMI is 18.5 to 24.9, it falls within the Healthy Weight range.</p>
-            `
-            DOM.appendChild(title, content)
-            document.querySelector('div.bmi-result').classList.add('healthy')
+            document.querySelector('div.bmi').classList.add('danger')
         }
-        else if (BMIData <= range.overweightLimit) {
-            title.innerHTML = 
+        else if (BMIData <= range.healthyWeightLimit) {                
+            content.innerHTML = 
             `
             <hr>
-            <div class="result-title">
-                <h2>Overweight</h2>
-                <div class="bmi-result">${BMIData}</div>
+            <div class="result">
+                <div class="content">
+                    <h2>Healthy Weight</h2>
+                    <p>If your BMI is 18.5 to 24.9, it falls within the Healthy Weight range.</p>
+                </div>
+                <div class="bmi">${BMIData}</div>
             </div>
             `
-            
-            content.innerHTML = 
-            `
-            <p>If your BMI is 25.0 to 29.9, it falls within the overweight range.</p>
-            `
-            DOM.appendChild(title, content)
-            document.querySelector('div.bmi-result').classList.add('caution')
+
+            document.querySelector('div.bmi').classList.add('healthy')
         }
-        else {
-            title.innerHTML = 
+        else if (BMIData <= range.overweightLimit) {  
+            content.innerHTML = 
             `
             <hr>
-            <div class="result-title">
-                <h2>Obese</h2>
-                <div class="bmi-result">${BMIData}</div>
+            <div class="result">
+                <div class="content">
+                    <h2>Overweight</h2>
+                    <p>If your BMI is 25.0 to 29.9, it falls within the overweight range.</p>
+                </div>
+                <div class="bmi">${BMIData}</div>
             </div>
             `
-            
+
+            document.querySelector('div.bmi').classList.add('caution')
+        }
+        else {           
             content.innerHTML = 
             `
-            <p>If your BMI is 30.0 or higher, it falls within the obese range.</p>
+            <hr>
+            <div class="result">
+                <div class="content">
+                    <h2>Obese</h2>
+                    <p>If your BMI is 30.0 or higher, it falls within the obese range.</p>
+                </div>
+                <div class="bmi">${BMIData}</div>
+            </div>
             `
-            DOM.appendChild(title, content)
-            document.querySelector('div.bmi-result').classList.add('danger')
+
+            document.querySelector('div.bmi').classList.add('danger')
         }  
         
-    },
-
-    appendChild(title, content) {
-        const resSection = document.querySelector('#result')
-
-        resSection.appendChild(title)
-        resSection.appendChild(content)
     },
 
     delete() {
