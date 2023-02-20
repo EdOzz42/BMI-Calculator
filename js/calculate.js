@@ -113,17 +113,29 @@ const ErrorVerification = {
             
             return false
         }
-        else if (weight.value > 400 || weight.value < 40) 
-        {
+        
+        if ((height.value > 200 || height.value < 70) && (weight.value > 400 || weight.value < 40)) {
+            error[0].innerHTML = "Error - Please enter a valid value (70cm - 200cm)"
+            error[0].classList.add('active')
+
             error[1].innerHTML = "Error - Please enter a valid value (40kg - 400kg)"
             error[1].classList.add('active')
 
             return false
         }
-        else if (height.value > 200 || height.value < 70) 
+
+        if (height.value > 200 || height.value < 70) 
         {
             error[0].innerHTML = "Error - Please enter a valid value (70cm - 200cm)"
             error[0].classList.add('active')
+
+            return false
+        }
+
+        if (weight.value > 400 || weight.value < 40) 
+        {
+            error[1].innerHTML = "Error - Please enter a valid value (40kg - 400kg)"
+            error[1].classList.add('active')
 
             return false
         }
